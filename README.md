@@ -5,49 +5,49 @@ In this project, we use Bank Marketing dataset to train a machine learning model
 ## Architectural Diagram
 
 The architetcure of the project is as indiacted in the diagram below:
-![](./images/Architecture.png) 
+![screenshot](images/Architecture.png) 
 
 ## Key Steps
 
 ### Deploy model in Azure ML Studio
 1. Configure Sevice Principal authentication on my own Azure portal, and use 'az ml workspace share' command to assign access to your role;
-![](./images/ServicePrincipal.png)
-![](./images/ServicePrincipalCompleted.png)
+![screenshot](images/ServicePrincipal.png)
+![screenshot](images/ServicePrincipalCompleted.png)
 
 2. Register dataset, in this case it is Bankmarketing dataset from bankmarketing_train.csv;
-![](./images/dataset.png)
+![screenshot](images/dataset.png)
 
 3. Configure the AutoML task, such as VM size, experiment type (which is Classification in this case), as well as Exit Criterion, etc.;
-![](./images/AutoMLConfig.png)
+![screenshot](images/AutoMLConfig.png)
 
 4. Run the AutoML task to get the best model;
-![](./images/AutoMlCompleted.png)
+![screenshot](images/AutoMlCompleted.png)
 
 5. Select the best ML model, and deploy it using ACI;
-![](./images/bestmodel.png)
+![screenshot](images/bestmodel.png)
 
-![](./images/deploymodel.png)
+![screenshot](images/deploymodel.png)
 
 6. (option) Use swagger to generate the web-based API document for easy reference;
-![](./images/swagger.png)
+![screenshot](images/swagger.png)
 
 7. Enable logging and Application insight to monitor the performance of the deployed model;
-![](./images/deployedmodel.png) 
+![screenshot](images/deployedmodel.png) 
 
 8. Write python code to consume the REST API to do prediction;
-![](./images/predict.png)
+![screenshot](images/predict.png)
 
 ### Publish an ML Pipeline
 In this step, we are using python to create and publish the pipeline, whose detail is shown in below images:
 1. Pipeline scheduled run details
-![](./images/pipelinedetail1.png)
-![](./images/pipelinedetail2.png)
+![screenshot](images/pipelinedetail1.png)
+![screenshot](images/pipelinedetail2.png)
 
 2. Pipeline is created successfully
-![](./images/pipelinecompleted.png)
+![screenshot](images/pipelinecompleted.png)
 
 3. Pipeline REST endpoint in active state
-![](./images/pipelinedetail.png)
+![screenshot](images/pipelinedetail.png)
 
 ## Screen Recording
 The screen recording is here:
